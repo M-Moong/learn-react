@@ -20,7 +20,7 @@ const status = 'isSuccess';
 
 
 /* 컴포넌트 -------------------------------------------------------------------------- */
-function ConditionalRendering({ imageType }) {
+function ConditionalRendering({ hidden, imageType }) {
   // 2-1. 조건 문 (함수 몸체(function body) 내부 사용)
   // let imageComponent; // undefined
 
@@ -33,6 +33,7 @@ function ConditionalRendering({ imageType }) {
 
   // 2-2. 조건 식 (함수 몸체 또는 JSX 내부 사용)
 
+  // if or switch 문 사용
   switch(status) {
     case 'isPending': return <p>대기 중입니다.</p>;
     case 'isLoading': return <p>로딩 중입니다.</p>;
@@ -41,11 +42,12 @@ function ConditionalRendering({ imageType }) {
   }
 
   // 2-2-1. 3항 연산식
-  const imageComponent = imageType === 'vite' ? (
-    <img src={ viteImagePath } alt="비트" />
-  ) : (
-    <img src={ reactImagePath } alt="리액트" />
-  );
+  const imageComponent =
+    imageType === 'vite' ? (
+      <img src={ viteImagePath } alt="비트" />
+    ) : (
+      <img src={ reactImagePath } alt="리액트" />
+    );
 
 
   const isReactImage = imageType === 'react';
@@ -55,7 +57,7 @@ function ConditionalRendering({ imageType }) {
   const isntShowImageLabel = true;
 
   return (
-    <>
+    <div hidden={ hidden }>
       <dt>조건부 렌더링(conditional rendering)</dt>
       <dd>
         <p>이미지 타입(image type)에 따라 렌더링 여부를 결정합니다.</p>
@@ -80,30 +82,19 @@ function ConditionalRendering({ imageType }) {
           /> */}
 
 
-          {/* <strong>논리 연산식으로 조건 처리</strong> */ }
-          {/* {
+          <strong>논리 연산식으로 조건 처리</strong>
+          {
             isShowImage && (
               <img
                 src={ isReactImage ? '/react.avif' : '/vite.svg' }
                 alt={ isReactImage ? '리액트' : '비트' }
               />
             )
-          } */}
-
-
-
-
-
+          }
 
           {/* imageType이 'vite'인 경우 'Vite', 'react'인 경우 'React' 텍스트를 화면에 표시합니다. */ }
           {/* { isReactImage ? 'React' : 'Vite' } */ }
           { isntShowImageLabel || imageLabel }
-
-
-
-
-
-
 
 
           {/* src/assets 동적 자원 호출 시 */ }
@@ -125,7 +116,7 @@ function ConditionalRendering({ imageType }) {
           }
         </div>
       </dd>
-    </>
+    </div>
   );
 }
 
