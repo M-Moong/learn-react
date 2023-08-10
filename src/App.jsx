@@ -1,5 +1,5 @@
 import RootLayout from './layout/RootLayout';
-import Practice from './pages/Practice';
+import Practice from './pages/Practice/Practice';
 
 {/* 홈 페이지 : index.html */ }
 {/* 소개 페이지 : about.html */ }
