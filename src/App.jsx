@@ -1,4 +1,5 @@
 import RootLayout from './layout/RootLayout';
+import FilterableList from './pages/Practice/FilterableList';
 import Practice from './pages/Practice/Practice';
 
 {/* 홈 페이지 : index.html */ }
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className='App'>
       <RootLayout>
-        <Practice />
+        <FilterableList />
       </RootLayout>
     </div>
   );

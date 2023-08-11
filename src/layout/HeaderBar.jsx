@@ -1,9 +1,12 @@
+import styles from '@/styles/HeaderBar.module.css';
+import Heading from "@/components/Heading";
+
 function HeaderBar() {
 	return (
-		<header>
-			<h1>리액트</h1>
+		<header className={styles.container}>
+			<Heading />
 		</header>
-	)
+	);
 }
 
 export default HeaderBar;
