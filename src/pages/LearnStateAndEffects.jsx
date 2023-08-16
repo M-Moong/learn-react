@@ -54,7 +54,7 @@ function LearnStateAndEffects() {
 
 	return (
 		<div className="m-10 flex flex-col gap-2 items-start">
-			<h2 className={`text-indigo-600 text-2xl ${fontWeight} uppercase`}>
+			<h2 className={`text-indigo-600 text-2xl ${fontWeight} uppercase font-suit`}>
 				상태 및 이펙트 학습하기
 			</h2>
 
