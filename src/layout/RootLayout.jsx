@@ -1,26 +1,14 @@
-/* eslint-disable react/prop-types */
-
-import HeaderBar from "./HeaderBar";
-import FooterBar from "./FooterBar";
+import FooterBar from './FooterBar';
+import HeaderBar from './HeaderBar';
 
 function RootLayout(props) {
-	console.log(props);
-
-	// React API
-	// return React.createElement(
-	//   type,
-	//   // props,
-	//   // ...children
-	//   // [child, child, child]
-	// )
-
-	// JSX
-	// children = []
-	return [
-		<HeaderBar key="header-bar" />,
-		<main key="main">{ props.children }</main>,
-		<FooterBar key="footer-bar" />
-	];
+  return (
+    <>
+      <HeaderBar />
+      <main>{props.children}</main>
+      <FooterBar />
+    </>
+  );
 }
 
 export default RootLayout;

@@ -1,18 +1,11 @@
 import RootLayout from './layout/RootLayout';
-import FilterableList from './pages/Practice/FilterableList';
-import Practice from './pages/Practice/Practice';
-
-{/* 홈 페이지 : index.html */ }
-{/* 소개 페이지 : about.html */ }
-{/* 제품 목록 페이지 : products.html */ }
-{/* 의뢰 페이지 : contact.html */ }
+import LearnStateAndEffects from './pages/LearnStateAndEffects';
 
 function App() {
-  // JSX 값 반환
   return (
-    <div className='App'>
+    <div className="App">
       <RootLayout>
-        <FilterableList />
+        <LearnStateAndEffects />
       </RootLayout>
     </div>
   );
