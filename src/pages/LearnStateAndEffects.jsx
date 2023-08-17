@@ -22,7 +22,7 @@ function LearnStateAndEffects() {
       );
 
       // error?
-      if(!response.ok) {
+      if (!response.ok) {
         // error handling
       }
 
@@ -35,7 +35,7 @@ function LearnStateAndEffects() {
     fetchTodos();
   }, []);
 
-  if(isLoading) {
+  if (isLoading) {
     return (
       <Spinner
         size={120}
