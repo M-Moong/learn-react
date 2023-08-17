@@ -2,7 +2,7 @@ import { useId, useState } from 'react';
 
 // const getOne = () => 1;
 
-function State_numberType() {
+function LearnStateAndEffects() {
   // 지역 변수는 상태 변수???
   // 리액트 상태 변수는 useState 훅(함수) 사용한다.
   // Q. 컴포넌트 count 상태를 리액트에서 인식하도록 정의해봅니다.
